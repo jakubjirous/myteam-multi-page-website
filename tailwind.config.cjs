@@ -31,6 +31,7 @@ module.exports = {
 				livvic: ["Livvic", ...defaultTheme.fontFamily.sans]
 			},
 			fontSize: {
+				10: ["0.625rem", { lineHeight: "1.125rem" }],
 				13: ["0.813rem", { lineHeight: "1.125rem" }],
 				15: ["0.938rem", { lineHeight: "1.563rem" }],
 				18: ["1.125rem", { lineHeight: "1.75rem" }],
