@@ -1,0 +1,48 @@
+---
+type Variant = "primary" | "secondary";
+
+const colors: Record<Variant, string> = {
+	primary:
+		"bg-transparent hover:bg-white text-white hover:text-swamp disabled:text-white/25 disabled:bg-transparent",
+	secondary: "bg-white text-swamp hover:bg-baked disabled:bg-white/25"
+};
+
+const borders: Record<Variant, string> = {
+	primary:
+		"border-solid border-2 border-transparent rounded-3xl disabled:border-white/25",
+	secondary: "rounded-3xl"
+};
+
+interface Props {
+	variant?: Variant;
+	disabled?: boolean;
+	href?: string;
+	target?: string;
+	className?: string;
+	onClick: () => void;
+}
+
+const { variant = "primary", disabled = false, href, target, className, onClick } = Astro.props;
+
+const baseClasses = [
+	"inline-flex m-2 py-2 px-8 text-18 font-semibold transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed",
+	colors[variant],
+	borders[variant],
+	className
+]
+	.filter(Boolean)
+	.join(" ");
+---
+
+{href ? (
+<a href={href} target={target} class={baseClasses}>
+	<slot />
+</a>
+	) : (
+<button disabled={disabled} onClick={onClick} class={baseClasses}>
+	<slot />
+</button>
+	)}
+
+
+
