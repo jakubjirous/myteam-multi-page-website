@@ -9,13 +9,13 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 ## ✅ Table of contents
 
 - [Overview](#-overview)
-    - [The challenge](#the-challenge)
-    - [Screenshots](#screenshots)
-    - [Links](#links)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
 - [My process](#-my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 - [Author](#-author)
 
 ---
@@ -30,8 +30,8 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - See the correct content for each team member on the About page when the `+` icon is clicked
 - Receive an error message when the contact form is submitted if:
-    - The `Name`, `Email Address` or `Message` fields are empty should show `"This field is required"`
-    - The `Email Address` is not formatted correctly should show `"Please use a valid email address"`
+  - The `Name`, `Email Address` or `Message` fields are empty should show `"This field is required"`
+  - The `Email Address` is not formatted correctly should show `"Please use a valid email address"`
 
 ### Screenshots
 
@@ -78,11 +78,11 @@ Users should be able to:
 - [React Documentation](https://beta.reactjs.org/)
 - [React Hook Form Documentation](https://react-hook-form.com/get-started)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
-    - [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
-    - [Customizing Screens](https://tailwindcss.com/docs/screens)
-    - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
-    - [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
-    - [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
+  - [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
+  - [Customizing Screens](https://tailwindcss.com/docs/screens)
+  - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
+  - [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
+  - [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
 
 ---
 
