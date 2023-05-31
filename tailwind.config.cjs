@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import("tailwindcss").Config} */
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -24,6 +26,9 @@ module.exports = {
 				cyprus: "#004047",
 				daintree: "#012F34",
 				swamp: "#002529"
+			},
+			fontFamily: {
+				livvic: ["Livvic", ...defaultTheme.fontFamily.sans]
 			},
 			fontSize: {
 				13: ["0.813rem", { lineHeight: "1.125rem" }],
