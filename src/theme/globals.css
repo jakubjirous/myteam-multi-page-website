@@ -8,4 +8,25 @@
 		font-family: "Livvic", serif;
 		@apply bg-sherpa;
 	}
+
+	/* scrollbars */
+	* {
+		scrollbar-width: auto;
+		scrollbar-color: theme("colors.casul") theme("colors.swamp");
+	}
+
+	*::-webkit-scrollbar {
+		width: 14px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: theme("colors.swamp");
+		border-radius: 8px;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: theme("colors.casul");
+		border-radius: 16px;
+		border: 2px solid theme("colors.casul");
+	}
 }
