@@ -21,7 +21,7 @@ interface Props {
 	href?: string;
 	target?: string;
 	className?: string;
-	onClick: () => void;
+	onClick?: () => void;
 }
 
 const {
@@ -49,8 +49,16 @@ const baseClasses = [
 		<slot />
 	</a>
 		) : (
-	<button disabled={disabled} onClick={onClick} class={baseClasses}>
+	<button disabled={disabled} class={baseClasses}>
 		<slot />
 	</button>
 		)
 	}
+
+<script>
+	const button = document.querySelector("button");
+
+	button?.addEventListener("click", () => {
+		console.log("button was clicked");
+	});
+</script>
