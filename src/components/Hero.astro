@@ -9,7 +9,7 @@ import Typography from "./Typography.astro";
 	<div
 		class="container mx-auto relative pt-20 pb-48 px-6 grid grid-cols-1 tablet:pt-28 tablet:pb-64 desktop:pt-32 desktop:pb-60 desktop:grid-cols-2">
 
-		<Typography variant="h1" className="text-white text-center desktop:text-left">
+		<Typography variant="h1" className="relative text-white text-center desktop:text-left">
 			Find the <br> best <span class="text-flory">talent</span>
 		</Typography>
 
@@ -20,9 +20,9 @@ import Typography from "./Typography.astro";
 		</Typography>
 
 		<Image src={pattern2} alt="Background pattern" width={358} height={100}
-					 class="absolute left-0 bottom-0 right-0 mx-auto hidden tablet:block desktop:left-auto desktop:right-36" />
+					 class="absolute z-0 left-0 bottom-0 right-0 mx-auto hidden tablet:block desktop:left-auto desktop:right-36" />
 	</div>
 
 	<Image src={pattern1} alt="Background pattern" width={200} height={200}
-				 class="absolute -left-[6.25rem] top-0 bottom-28 my-auto hidden min-[1700px]:block" />
+				 class="absolute z-0 -left-[6.25rem] top-0 bottom-28 my-auto hidden min-[1700px]:block" />
 </section>

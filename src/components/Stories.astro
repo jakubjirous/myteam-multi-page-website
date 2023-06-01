@@ -11,7 +11,7 @@ const allStories = await getCollection("stories");
 
 <section class="bg-cyprus relative overflow-hidden">
 	<div class="container mx-auto pt-32 pb-40 px-6 tablet:py-24 dekstop:py-36">
-		<Typography variant="h2" className="text-white text-center mx-auto tablet:max-w-lg desktop:max-w-5xl">
+		<Typography variant="h2" className="text-white text-center mx-auto relative tablet:max-w-lg desktop:max-w-5xl">
 			Delivering real results for top companies. Some of our <span class="text-baked">success stories.</span>
 		</Typography>
 
@@ -44,7 +44,7 @@ const allStories = await getCollection("stories");
 			})}
 		</div>
 
-		<Image src={pattern1} alt="Background pattern" width={147} height={100} class="absolute top-0 left-0" />
-		<Image src={pattern2} alt="Background pattern" width={200} height={100} class="absolute bottom-0 right-0" />
+		<Image src={pattern1} alt="Background pattern" width={147} height={100} class="absolute z-0 top-0 left-0" />
+		<Image src={pattern2} alt="Background pattern" width={200} height={100} class="absolute z-0 bottom-0 right-0" />
 	</div>
 </section>

@@ -11,7 +11,7 @@ const allTeams = await getCollection("teams");
 	<div class="container mx-auto py-16 px-6 grid grid-cols-1 tablet:py-24 dekstop:py-36 desktop:grid-cols-2">
 
 		<Typography variant="h2"
-								className="text-white text-left relative mt-8 max-w-[15rem] tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14">
+								className="text-white text-left mt-8 max-w-[15rem] relative z-10 tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14">
 			Build & manage distributed teams like no one else.
 		</Typography>
 
@@ -36,6 +36,6 @@ const allTeams = await getCollection("teams");
 		</div>
 
 		<Image src={pattern} alt="Background pattern" width={200} height={244}
-					 class="absolute top-0 -right-[6.25rem] desktop:bottom-0 desktop:top-auto" />
+					 class="absolute z-0 top-0 -right-[6.25rem] desktop:bottom-0 desktop:top-auto" />
 	</div>
 </section>
