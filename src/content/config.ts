@@ -19,7 +19,16 @@ const teamsCollection = defineCollection({
 	})
 });
 
+const clientsCollection = defineCollection({
+	type: "content",
+	schema: z.object({
+		title: z.string(),
+		logoUrl: z.string()
+	})
+});
+
 export const collections = {
 	"stories": storiesCollection,
-	"teams": teamsCollection
+	"teams": teamsCollection,
+	"clients": clientsCollection
 };
