@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "@astrojs/image/components";
+import pattern from "../assets/bg-pattern-about-4.svg";
+import Typography from "./Typography.astro";
+
+const allClients = await getCollection("clients");
+---
+
+<section class="bg-daintree relative overflow-hidden">
+	<div class="container mx-auto px-6 py-20 tablet:py-24 desktop:py-36">
+		<Typography variant="h2" className="relative text-white text-center z-10">
+			Some of our clients
+		</Typography>
+
+		<div class="flex flex-col gap-14 justify-center items-center mt-16 tablet:flex-row">
+			{allClients.map(client => {
+				return (
+					<div>
+						<Image src={import(client.data.logoUrl)} alt={client.data.title} aria-label={client.data.title}
+									 class="scale-50 tablet:scale-100 desktop:scale-75" />
+					</div>
+				);
+			})}
+		</div>
+	</div>
+
+	<Image src={pattern} alt="Background pattern" width={200} height={200}
+				 class="absolute z-0 -top-[6.25rem] -left-[6.25rem] tablet:left-0 desktop:top-0 desktop:left-0" />
+</section>
