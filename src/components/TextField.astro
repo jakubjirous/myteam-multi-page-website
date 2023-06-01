@@ -1,41 +1,79 @@
 ---
 interface Props {
-	label: string
-	name: string,
-	type: string,
-	isMultiline?: boolean
-	isRequired?: boolean
-	error?: string
+	label: string;
+	name: string;
+	type: string;
+	isMultiline?: boolean;
+	isRequired?: boolean;
+	error?: string;
 }
 
-const { label, name = "field", type = "text", isMultiline = false, isRequired = false, error } = Astro.props;
+const {
+	label,
+	name = "field",
+	type = "text",
+	isMultiline = false,
+	isRequired = false,
+	error,
+} = Astro.props;
 
-const fieldClasses = "appearance-none bg-transparent w-full text-white text-18 py-2 px-5 leading-tight focus:outline-none border-none";
+const fieldClasses =
+	"appearance-none bg-transparent w-full text-white text-18 py-2 px-5 leading-tight focus:outline-none border-none";
 ---
 
 <div class="group flex flex-col py-2">
-	<label for={name}
-				 class:list={["text-15 leading-6 font-semibold opacity-60 group-focus-within:opacity-100 px-5 ease-in-out duration-300", {
-					 "text-flory": error,
-					 "text-white": !error
-				 }]}>
+	<label
+		for={name}
+		class:list={[
+			"text-15 leading-6 font-semibold opacity-60 group-focus-within:opacity-100 px-5 ease-in-out duration-300",
+			{
+				"text-flory": error,
+				"text-white": !error,
+			},
+		]}
+	>
 		{label}
 	</label>
-	<div class:list={["border-b ease-in-out duration-300", {
-		"border-b-flory": error,
-		"border-b-white group-focus-within:border-b-baked": !error
-	}]}>
-		{isMultiline ? (
-			<textarea id={name + ""} rows="4" name={name} required={isRequired} aria-label={name}
-								class={fieldClasses}></textarea>
-
-		) : (
-			<input id={name} name={name} type={type} required={isRequired} aria-label={name} class={fieldClasses}>
-		)}
-
+	<div
+		class:list={[
+			"border-b ease-in-out duration-300",
+			{
+				"border-b-flory": error,
+				"border-b-white group-focus-within:border-b-baked": !error,
+			},
+		]}
+	>
+		{
+			isMultiline ? (
+				<textarea
+					id={name + ""}
+					rows="4"
+					name={name}
+					required={isRequired}
+					aria-label={name}
+					class={fieldClasses}
+				/>
+			) : (
+				<input
+					id={name}
+					name={name}
+					type={type}
+					required={isRequired}
+					aria-label={name}
+					class={fieldClasses}
+				/>
+			)
+		}
 	</div>
 
-	<p class:list={["px-5 pt-2 text-flory text-10 font-bold italic", {
-		"visible": error
-	}]}>{error}</p>
+	<p
+		class:list={[
+			"px-5 pt-2 text-flory text-10 font-bold italic",
+			{
+				visible: error,
+			},
+		]}
+	>
+		{error}
+	</p>
 </div>

@@ -2,6 +2,7 @@
 import Button from "../components/Button.astro";
 import TextField from "../components/TextField.astro";
 import Typography from "../components/Typography.astro";
+import Base from "../layouts/Base.astro";
 import Layout from "../layouts/Layout.astro";
 
 // fonts
@@ -17,9 +18,8 @@ import "@fontsource/livvic/900.css";
 import "../theme/globals.css";
 ---
 
-<Layout title="Home">
-	<main>
-
+<Base title="Home">
+	<Layout>
 		<Typography variant="h1">Heading 1</Typography>
 		<Typography variant="h2">Heading 2</Typography>
 		<Typography variant="h3">Heading 3</Typography>
@@ -29,22 +29,12 @@ import "../theme/globals.css";
 		<Typography variant="small">Error</Typography>
 		<hr />
 		<Button onClick={null}>contact us</Button>
-		<Button onClick={null} disabled>
-			Primary
-		</Button>
-		<Button onClick={null} href="/" target="_blank">
-			Link
-		</Button>
-		<Button onClick={null} href="/" target="_blank" disabled>
-			Link dis
-		</Button>
+		<Button onClick={null} disabled>Primary</Button>
+		<Button onClick={null} href="/" target="_blank">Link</Button>
+		<Button onClick={null} href="/" target="_blank" disabled>Link dis</Button>
 		<hr />
-		<Button onClick={null} variant="secondary">
-			Secondary
-		</Button>
-		<Button onClick={null} variant="secondary" disabled>
-			Link
-		</Button>
+		<Button onClick={null} variant="secondary">Secondary</Button>
+		<Button onClick={null} variant="secondary" disabled>Link</Button>
 		<Button onClick={null} href="/" target="_blank" variant="secondary">
 			Link
 		</Button>
@@ -64,13 +54,19 @@ import "../theme/globals.css";
 
 		<hr />
 
-		<TextField label="Insert your message here" name="name1" isRequired="true" error="This field is required" />
+		<TextField
+			label="Insert your message here"
+			name="name1"
+			isRequired="true"
+			error="This field is required"
+		/>
 
-		<TextField label="Insert your message here" name="name2" isRequired="true" isMultiline="true"
-							 error="This field is required" />
-
-	</main>
-</Layout>
-
-<style>
-</style>
+		<TextField
+			label="Insert your message here"
+			name="name2"
+			isRequired="true"
+			isMultiline="true"
+			error="This field is required"
+		/>
+	</Layout>
+</Base>
