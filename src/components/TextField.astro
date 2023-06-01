@@ -2,7 +2,7 @@
 interface Props {
 	label: string;
 	name: string;
-	type: string;
+	type?: string;
 	isMultiline?: boolean;
 	isRequired?: boolean;
 	error?: string;
@@ -14,7 +14,7 @@ const {
 	type = "text",
 	isMultiline = false,
 	isRequired = false,
-	error,
+	error
 } = Astro.props;
 
 const fieldClasses =
@@ -28,8 +28,8 @@ const fieldClasses =
 			"text-15 leading-6 font-semibold opacity-60 group-focus-within:opacity-100 px-5 ease-in-out duration-300",
 			{
 				"text-flory": error,
-				"text-white": !error,
-			},
+				"text-white": !error
+			}
 		]}
 	>
 		{label}
@@ -39,8 +39,8 @@ const fieldClasses =
 			"border-b ease-in-out duration-300",
 			{
 				"border-b-flory": error,
-				"border-b-white group-focus-within:border-b-baked": !error,
-			},
+				"border-b-white group-focus-within:border-b-baked": !error
+			}
 		]}
 	>
 		{
@@ -70,8 +70,8 @@ const fieldClasses =
 		class:list={[
 			"px-5 pt-2 text-flory text-10 font-bold italic",
 			{
-				visible: error,
-			},
+				visible: error
+			}
 		]}
 	>
 		{error}
