@@ -31,23 +31,18 @@ import "../theme/globals.css";
 		<Button onClick={null}>contact us</Button>
 		<Button onClick={null} disabled>Primary</Button>
 		<Button onClick={null} href="/" target="_blank">Link</Button>
-		<Button onClick={null} href="/" target="_blank" disabled>Link dis</Button>
+
 		<hr />
 		<Button onClick={null} variant="secondary">Secondary</Button>
-		<Button onClick={null} variant="secondary" disabled>Link</Button>
+		<Button onClick={null} variant="secondary" disabled>Secondary - Link</Button>
 		<Button onClick={null} href="/" target="_blank" variant="secondary">
-			Link
+			Secondary - Link
 		</Button>
-		{" "}
-		<Button
-			onClick={null}
-			href="/"
-			target="_blank"
-			variant="secondary"
-			disabled
-		>
-			Link dis
-		</Button>
+		<hr>
+		<Button variant="primary-dark" onClick={null}>Primary dark</Button>
+		<Button variant="primary-dark" onClick={null} disabled>Primary dark - disabled</Button>
+		<Button variant="primary-dark" onClick={null} href="/" target="_blank">Primary dark - Link</Button>
+
 		<hr />
 
 		<TextField label="Insert your message here" name="name" isRequired="true" />

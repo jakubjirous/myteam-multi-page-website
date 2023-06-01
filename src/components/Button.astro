@@ -1,16 +1,18 @@
 ---
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "primary-dark";
 
 const colors: Record<Variant, string> = {
 	primary:
-		"bg-transparent hover:bg-white text-white hover:text-swamp disabled:text-white/25 disabled:bg-transparent",
+		"bg-transparent text-white hover:bg-white hover:text-swamp disabled:text-white/25 disabled:bg-transparent",
 	secondary: "bg-white text-swamp hover:bg-baked disabled:bg-white/25",
+	"primary-dark": "bg-transparent text-daintree hover:bg-daintree hover:text-white disabled:text-white/25 disabled:bg-transparent"
 };
 
 const borders: Record<Variant, string> = {
 	primary:
 		"border-solid border-2 border-transparent rounded-3xl disabled:border-white/25",
 	secondary: "rounded-3xl",
+	"primary-dark": "border-solid border-2 border-daintree rounded-3xl disabled:border-white/25"
 };
 
 interface Props {
@@ -28,14 +30,14 @@ const {
 	href,
 	target,
 	className,
-	onClick,
+	onClick
 } = Astro.props;
 
 const baseClasses = [
 	"inline-flex m-2 py-2 px-8 text-18 font-semibold transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed",
 	colors[variant],
 	borders[variant],
-	className,
+	className
 ]
 	.filter(Boolean)
 	.join(" ");
@@ -43,12 +45,12 @@ const baseClasses = [
 
 {
 	href ? (
-		<a href={href} target={target} class={baseClasses}>
-			<slot />
-		</a>
-	) : (
-		<button disabled={disabled} onClick={onClick} class={baseClasses}>
-			<slot />
-		</button>
-	)
-}
+	<a role="link" href={href} target={target} class={baseClasses} aria-disabled={disabled}>
+		<slot />
+	</a>
+		) : (
+	<button disabled={disabled} onClick={onClick} class={baseClasses}>
+		<slot />
+	</button>
+		)
+	}
