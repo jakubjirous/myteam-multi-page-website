@@ -1,6 +1,7 @@
 ---
 import Button from "../components/Button.astro";
 import Ready from "../components/Ready.astro";
+import Stories from "../components/Stories.astro";
 import TextField from "../components/TextField.astro";
 import Typography from "../components/Typography.astro";
 import Base from "../layouts/Base.astro";
@@ -29,20 +30,20 @@ import "../theme/globals.css";
 		<Typography variant="body2">Body 2</Typography>
 		<Typography variant="small">Error</Typography>
 		<hr />
-		<Button onClick={null}>contact us</Button>
-		<Button onClick={null} disabled>Primary</Button>
-		<Button onClick={null} href="/" target="_blank">Link</Button>
+		<Button>contact us</Button>
+		<Button disabled>Primary</Button>
+		<Button href="/" target="_blank">Link</Button>
 
 		<hr />
-		<Button onClick={null} variant="secondary">Secondary</Button>
-		<Button onClick={null} variant="secondary" disabled>Secondary - Link</Button>
-		<Button onClick={null} href="/" target="_blank" variant="secondary">
+		<Button variant="secondary">Secondary</Button>
+		<Button variant="secondary" disabled>Secondary - Link</Button>
+		<Button href="/" target="_blank" variant="secondary">
 			Secondary - Link
 		</Button>
 		<hr>
-		<Button variant="primary-dark" onClick={null}>Primary dark</Button>
-		<Button variant="primary-dark" onClick={null} disabled>Primary dark - disabled</Button>
-		<Button variant="primary-dark" onClick={null} href="/" target="_blank">Primary dark - Link</Button>
+		<Button variant="primary-dark">Primary dark</Button>
+		<Button variant="primary-dark" disabled>Primary dark - disabled</Button>
+		<Button variant="primary-dark" href="/" target="_blank">Primary dark - Link</Button>
 
 		<hr />
 
@@ -64,6 +65,8 @@ import "../theme/globals.css";
 			isMultiline={true}
 			error="This field is required"
 		/>
+
+		<Stories />
 
 		<Ready />
 
