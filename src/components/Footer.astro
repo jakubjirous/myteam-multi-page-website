@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import logo from "../assets/logo.svg";
+import Typography from "./Typography.astro";
 
 const year = new Date().getFullYear();
 ---
@@ -22,8 +23,8 @@ const year = new Date().getFullYear();
 			<Image
 				src={logo}
 				alt="MyTeam"
-				width="160"
-				height="40"
+				width={160}
+				height={40}
 				class="hidden desktop:inline-flex"
 			/>
 		</div>
@@ -50,12 +51,20 @@ const year = new Date().getFullYear();
 		</nav>
 
 		<div
-			class="w-full text-center tablet:text-right desktop:text-left font-semibold text-15 opacity-60 tablet:order-2 tablet:row-span-2"
+			class="w-full opacity-60 tablet:order-2 tablet:row-span-2"
 		>
-			<p>987 Hillcrest Lane</p>
-			<p>Irvine, CA</p>
-			<p>California 92714</p>
-			<p>Call Us : 949-833-7432</p>
+			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+				987 Hillcrest Lane
+			</Typography>
+			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+				Irvine, CA
+			</Typography>
+			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+				California 92714
+			</Typography>
+			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+				Call Us : 949-833-7432
+			</Typography>
 		</div>
 
 		<div
@@ -103,9 +112,11 @@ const year = new Date().getFullYear();
 		</div>
 
 		<div
-			class="w-full font-semibold text-15 opacity-60 flex justify-center tablet:justify-end tablet:order-5 tablet:items-end"
+			class="w-full flex justify-center tablet:justify-end tablet:order-5 tablet:items-end"
 		>
-			Copyright {year}. All Rights Reserved
+			<Typography variant="body2" as="p" className="opacity-60">
+				Copyright {year}. All Rights Reserved
+			</Typography>
 		</div>
 	</div>
 </footer>
