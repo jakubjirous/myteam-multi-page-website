@@ -10,12 +10,12 @@ const allStories = await getCollection("stories");
 ---
 
 <section class="bg-cyprus relative overflow-hidden">
-	<div class="container mx-auto pt-32 pb-40 px-6 tablet:py-24 dekstop:py-32">
-		<Typography variant="h2" className="text-white mx-auto tablet:max-w-lg desktop:max-w-5xl">
+	<div class="container mx-auto pt-32 pb-40 px-6 tablet:py-24 dekstop:py-36">
+		<Typography variant="h2" className="text-white text-center mx-auto tablet:max-w-lg desktop:max-w-5xl">
 			Delivering real results for top companies. Some of our <span class="text-baked">success stories.</span>
 		</Typography>
 
-		<div class="flex flex-col gap-12 pt-12 desktop:flex-row desktop:gap-8 desktop:pt-14">
+		<div class="flex flex-col gap-12 mt-12 desktop:flex-row desktop:gap-8 desktop:mt-14">
 			{allStories.map(story => {
 				return (
 					<div>
@@ -36,6 +36,7 @@ const allStories = await getCollection("stories");
 						</div>
 						<div class="flex flex-row justify-center pt-4">
 							<Image src={import(story.data.avatarUrl)} alt={story.data.name} width={62} height={62}
+										 aria-label={story.data.name}
 										 class="rounded-full border-2 border-baked" />
 						</div>
 					</div>
