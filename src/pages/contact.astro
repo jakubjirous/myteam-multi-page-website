@@ -1,0 +1,26 @@
+---
+import TextField from "../components/TextField.astro";
+import Base from "../layouts/Base.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Base title="Contact">
+	<Layout>
+		<TextField
+			label="Insert your message here"
+			name="name1"
+			isRequired="true"
+			error="This field is required"
+		/>
+
+		<hr />
+
+		<TextField
+			label="Insert your message here"
+			name="name2"
+			isRequired="true"
+			isMultiline="true"
+			error="This field is required"
+		/>
+	</Layout>
+</Base>
