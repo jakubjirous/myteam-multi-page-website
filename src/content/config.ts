@@ -23,7 +23,8 @@ const clientsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
-		logoUrl: z.string()
+		logoUrl: z.string(),
+		url: z.string()
 	})
 });
 
