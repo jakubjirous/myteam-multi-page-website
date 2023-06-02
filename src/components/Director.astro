@@ -1,12 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 import iconCross from "../assets/icon-cross.svg";
 import Typography from "./Typography.astro";
 
 interface Props {
-	director?: CollectionEntry<"directors">;
+	director: CollectionEntry<"directors">;
 }
 
 const { director } = Astro.props;
