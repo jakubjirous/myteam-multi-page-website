@@ -16,7 +16,7 @@ const allTeams = await getCollection("teams");
 		</Typography>
 
 		<div class="flex flex-col gap-12 mt-14 tablet:gap-8 tablet:mt-16 desktop:gap-8 desktop:justify-start desktop:mt-8">
-			{allTeams.map(team => {
+			{allTeams?.map(team => {
 				return (
 					<div class="flex flex-col items-center tablet:flex-row tablet:gap-6">
 						<Image src={import(team.data.iconUrl)} alt={team.data.title} width={72} height={72}

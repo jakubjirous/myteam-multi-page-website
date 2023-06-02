@@ -14,10 +14,11 @@ const allClients = await getCollection("clients");
 		</Typography>
 
 		<div class="flex flex-col gap-14 justify-center items-center mt-16 tablet:flex-row">
-			{allClients.map(client => {
+			{allClients?.map(client => {
 				return (
 					<div>
-						<Image src={import(client.data.logoUrl)} alt={client.data.title} aria-label={client.data.title}
+						<Image src={import(client.data.logoUrl)} alt={client.data.title}
+									 aria-label={client.data.title}
 									 class="scale-50 tablet:scale-100 desktop:scale-75" />
 					</div>
 				);

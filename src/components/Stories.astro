@@ -16,7 +16,7 @@ const allStories = await getCollection("stories");
 		</Typography>
 
 		<div class="flex flex-col gap-12 mt-12 desktop:flex-row desktop:gap-8 desktop:mt-14">
-			{allStories.map(story => {
+			{allStories?.map(story => {
 				return (
 					<div>
 						<div class="bg-[url('src/assets/icon-quotes.svg')] bg-no-repeat bg-top pt-9">

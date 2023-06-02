@@ -1,7 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import pattern from "../assets/bg-pattern-home-6-about-5.svg";
-import Button from "./Button.astro";
+import MyButton from "./MyButton.astro";
 import Typography from "./Typography.astro";
 ---
 
@@ -11,7 +11,7 @@ import Typography from "./Typography.astro";
 		<div class="max-w-xs tablet:max-w-full">
 			<Typography variant="h2" className="text-daintree text-center relative">Ready to get started?</Typography>
 		</div>
-		<Button variant="primary-dark" href="/contact">Contact us</Button>
+		<MyButton variant="primary-dark" href="/contact">Contact us</MyButton>
 	</div>
 
 	<Image src={pattern} alt="Background pattern" width={200} height={144}
