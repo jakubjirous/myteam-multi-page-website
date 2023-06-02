@@ -13,9 +13,9 @@ const storiesCollection = defineCollection({
 const teamsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
-		iconUrl: z.string(),
 		title: z.string(),
-		description: z.string()
+		description: z.string(),
+		iconUrl: z.string()
 	})
 });
 
@@ -27,8 +27,24 @@ const clientsCollection = defineCollection({
 	})
 });
 
+const directorsCollection = defineCollection({
+	type: "content",
+	schema: z.object({
+		name: z.string(),
+		job: z.string(),
+		quote: z.string(),
+		avatarUrl: z.string(),
+		socials: z.array(z.object({
+			title: z.string(),
+			url: z.string(),
+			iconName: z.string()
+		}))
+	})
+});
+
 export const collections = {
 	"stories": storiesCollection,
 	"teams": teamsCollection,
-	"clients": clientsCollection
+	"clients": clientsCollection,
+	"directors": directorsCollection
 };
