@@ -1,6 +1,6 @@
 ---
-import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
+import MyButton from "../components/MyButton.astro";
 import Ready from "../components/Ready.astro";
 import Stories from "../components/Stories.astro";
 import Teams from "../components/Teams.astro";
@@ -20,20 +20,20 @@ import Layout from "../layouts/Layout.astro";
 		<Typography variant="body2">Body 2</Typography>
 		<Typography variant="small">Error</Typography>
 		<hr />
-		<Button>contact us</Button>
-		<Button disabled>Primary</Button>
-		<Button href="/" target="_blank">Link</Button>
+		<MyButton>contact us</MyButton>
+		<MyButton disabled={true}>Primary</MyButton>
+		<MyButton href="/" target="_blank">Link</MyButton>
 
 		<hr />
-		<Button variant="secondary">Secondary</Button>
-		<Button variant="secondary" disabled>Secondary - Link</Button>
-		<Button href="/" target="_blank" variant="secondary">
+		<MyButton variant="secondary">Secondary</MyButton>
+		<MyButton variant="secondary" disabled={true}>Secondary - Link</MyButton>
+		<MyButton href="/" target="_blank" variant="secondary">
 			Secondary - Link
-		</Button>
+		</MyButton>
 		<hr>
-		<Button variant="primary-dark">Primary dark</Button>
-		<Button variant="primary-dark" disabled>Primary dark - disabled</Button>
-		<Button variant="primary-dark" href="/" target="_blank">Primary dark - Link</Button>
+		<MyButton variant="primary-dark">Primary dark</MyButton>
+		<MyButton variant="primary-dark" disabled={true}>Primary dark - disabled</MyButton>
+		<MyButton variant="primary-dark" href="/" target="_blank">Primary dark - Link</MyButton>
 
 		<hr />
 
