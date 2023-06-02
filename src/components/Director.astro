@@ -1,0 +1,66 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import { CollectionEntry } from "astro:content";
+import iconCross from "../assets/icon-cross.svg";
+import Typography from "./Typography.astro";
+
+interface Props {
+	director?: CollectionEntry<"directors">;
+}
+
+const { director } = Astro.props;
+---
+
+<div class="relative">
+	<div class="group w-screen h-64 mx-auto max-w-[20.5rem] tablet:max-w-full">
+		<button
+			class="peer w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300 hover:bg-baked hover:rotate-45 group-hover:bg-baked group-hover:rotate-45">
+			<Image src={iconCross} alt="More" width={16} height={16} />
+		</button>
+
+		<div
+			class="relative h-full w-full transition-all duration-300 [transform-style:preserve-3d] peer-hover:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
+
+			<!-- front -->
+			<div
+				class="absolute inset-0 bg-daintree transition-all duration-300 flex flex-col items-center p-8">
+				<Image src={import(/* @vite-ignore */director.data.avatarUrl)} alt={director.data.name} width={96}
+							 height={96}
+							 aria-label={director.data.name}
+							 class="rounded-full border-2 border-baked" />
+
+				<Typography variant="body1" as="p" className="text-baked text-center pt-4">
+					{director.data.name}
+				</Typography>
+
+				<Typography variant="body2" as="p" className="text-white text-center italic mb-7">
+					{director.data.job}
+				</Typography>
+			</div>
+
+			<!-- back -->
+			<div
+				class="absolute inset-0 h-full w-full bg-daintree flex flex-col items-center px-6 pt-8 desktop:pt-12 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+				<Typography variant="body1" as="p" className="text-baked text-center">
+					{director.data.name}
+				</Typography>
+
+				<Typography variant="body2" as="p" className="text-white text-center mt-2">
+					{director.data.quote}
+				</Typography>
+
+				<div class="flex flex-row gap-4 mt-6">
+					{director.data.socials.map(social => {
+						return (
+							<a href={social.url} target="_blank" rel="nofollow"
+								 class="text-white hover:text-flory ease-in-out duration-300">
+								<Icon name={social.iconName} width={24} height={24} />
+							</a>
+						);
+					})}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
