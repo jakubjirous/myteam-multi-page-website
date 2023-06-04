@@ -1,8 +1,10 @@
 ---
+import type { HTMLInputTypeAttribute } from "react";
+
 interface Props {
 	label: string;
 	name: string;
-	type?: string;
+	type?: HTMLInputTypeAttribute;
 	isMultiline?: boolean;
 	isRequired?: boolean;
 	error?: string;
@@ -11,7 +13,7 @@ interface Props {
 const {
 	label,
 	name = "field",
-	type = "text",
+	type = "text" as HTMLInputTypeAttribute,
 	isMultiline = false,
 	isRequired = false,
 	error
