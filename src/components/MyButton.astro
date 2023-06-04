@@ -17,6 +17,7 @@ const borders: Record<Variant, string> = {
 
 interface Props {
 	variant?: Variant;
+	type?: "button" | "submit" | "reset";
 	disabled?: boolean;
 	href?: string;
 	target?: string;
@@ -26,6 +27,7 @@ interface Props {
 
 const {
 	variant = "primary",
+	type,
 	disabled = false,
 	href,
 	target,
@@ -49,7 +51,7 @@ const baseClasses = [
 		<slot />
 	</a>
 		) : (
-	<button disabled={disabled} class={baseClasses}>
+	<button type={type ?? "button"} disabled={disabled} class={baseClasses}>
 		<slot />
 	</button>
 		)
