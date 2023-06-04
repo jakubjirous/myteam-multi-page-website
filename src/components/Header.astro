@@ -9,20 +9,22 @@ import NavLink from "./NavLink.astro";
 	<div
 		class="container mx-auto flex flex-row justify-between items-center min-h-[7.5rem] gap-12 px-10 desktop:gap-20 desktop:px-6">
 		<div class="flex-initial min-w-[6rem]">
-			<Image
-				src={logo}
-				alt="MyTeam"
-				width={95}
-				height={24}
-				class="desktop:hidden"
-			/>
-			<Image
-				src={logo}
-				alt="MyTeam"
-				width={160}
-				height={40}
-				class="hidden desktop:inline-flex"
-			/>
+			<a href="/">
+				<Image
+					src={logo}
+					alt="MyTeam"
+					width={95}
+					height={24}
+					class="desktop:hidden"
+				/>
+				<Image
+					src={logo}
+					alt="MyTeam"
+					width={160}
+					height={40}
+					class="hidden desktop:inline-flex"
+				/>
+			</a>
 		</div>
 
 		<nav class="hidden tablet:flex flex-row items-center justify-between w-full">
