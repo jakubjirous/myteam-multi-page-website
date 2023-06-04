@@ -1,26 +1,26 @@
 ---
-import TextField from "../components/TextField.astro";
+import { Image } from "@astrojs/image/components";
+import pattern1 from "../assets/bg-pattern-about-2-contact-1.svg";
+import pattern2 from "../assets/bg-pattern-contact-2.svg";
+import Ask from "../components/Ask.astro";
+import ContactForm from "../components/ContactForm.astro";
 import Base from "../layouts/Base.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Base title="Contact">
 	<Layout>
-		<TextField
-			label="Insert your message here"
-			name="name1"
-			isRequired={true}
-			error="This field is required"
-		/>
+		<section class="bg-sherpa relative overflow-hidden">
+			<div class="container mx-auto px-6 py-24 tablet:py-28 grid grid-cols-1 gap-14 tablet:gap-16 desktop:grid-cols-2">
+				<Ask />
+				<ContactForm />
+			</div>
 
-		<hr />
+			<Image src={pattern1} alt="Background pattern" width={200} height={200}
+						 class="absolute z-0 top-0 -left-[6.25rem] hidden tablet:block tablet:top-24 desktop:hidden min-[1700px]:block" />
 
-		<TextField
-			label="Insert your message here"
-			name="name2"
-			isRequired={true}
-			isMultiline={true}
-			error="This field is required"
-		/>
+			<Image src={pattern2} alt="Background pattern" width={200} height={200}
+						 class="absolute z-0 -bottom-[6.25rem] -right-[6.25rem] tablet:bottom-0" />
+		</section>
 	</Layout>
 </Base>
