@@ -1,0 +1,74 @@
+---
+import MyButton from "./MyButton.astro";
+import TextField from "./TextField.astro";
+import Typography from "./Typography.astro";
+
+let result;
+
+if (Astro.request.method === "POST") {
+	try {
+		const data = await Astro.request.formData();
+
+		const name = data.get("name");
+		// const email = data.get("email");
+		// const company = data.get("company");
+		// const title = data.get("title");
+		// const message = data.get("message");
+
+		result = `Thank you for reaching out to us, ${name}!`;
+
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error(error.message);
+		}
+	}
+}
+---
+
+<form method="POST" class="w-full max-w-[540px] mx-auto">
+	<div class:list={[{
+		hidden: !result
+	}, "flex flex-col items-center"]}>
+		<Typography variant="h2" className="text-white text-center desktop:text-left">
+			{result}
+		</Typography>
+
+		<Typography variant="body2" as="p" className="text-white text-center mt-4 desktop:text-left">
+			Your message has been successfully sent through our contact form. We appreciate your interest and will respond to
+			your inquiry as soon as possible. Have a great day!
+		</Typography>
+
+		<MyButton href="/contact" variant="secondary" type="submit" className="w-max mt-8">Send another message</MyButton>
+	</div>
+
+	<div class:list={{ hidden: result }}>
+		<div class="flex flex-col gap-6">
+			<TextField
+				label="Name"
+				name="name"
+				isRequired={true}
+			/>
+			<TextField
+				label="E-mail Address"
+				name="email"
+				type="email"
+				isRequired={true}
+			/>
+			<TextField
+				label="Company Name"
+				name="company"
+			/>
+			<TextField
+				label="Title"
+				name="title"
+			/>
+			<TextField
+				label="Message"
+				name="message"
+				isRequired={true}
+				isMultiline={true}
+			/>
+		</div>
+		<MyButton variant="secondary" type="submit" className="w-min mt-2">Submit</MyButton>
+	</div>
+</form>
