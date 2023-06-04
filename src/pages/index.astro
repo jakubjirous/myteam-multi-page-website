@@ -1,61 +1,14 @@
 ---
 import Hero from "../components/Hero.astro";
-import MyButton from "../components/MyButton.astro";
 import Ready from "../components/Ready.astro";
 import Stories from "../components/Stories.astro";
 import Teams from "../components/Teams.astro";
-import TextField from "../components/TextField.astro";
-import Typography from "../components/Typography.astro";
 import Base from "../layouts/Base.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Base title="Home">
 	<Layout>
-		<Typography variant="h1">Heading 1</Typography>
-		<Typography variant="h2">Heading 2</Typography>
-		<Typography variant="h3">Heading 3</Typography>
-		<hr />
-		<Typography variant="body1">Body 1</Typography>
-		<Typography variant="body2">Body 2</Typography>
-		<Typography variant="small">Error</Typography>
-		<hr />
-		<MyButton>contact us</MyButton>
-		<MyButton disabled={true}>Primary</MyButton>
-		<MyButton href="/" target="_blank">Link</MyButton>
-
-		<hr />
-		<MyButton variant="secondary">Secondary</MyButton>
-		<MyButton variant="secondary" disabled={true}>Secondary - Link</MyButton>
-		<MyButton href="/" target="_blank" variant="secondary">
-			Secondary - Link
-		</MyButton>
-		<hr>
-		<MyButton variant="primary-dark">Primary dark</MyButton>
-		<MyButton variant="primary-dark" disabled={true}>Primary dark - disabled</MyButton>
-		<MyButton variant="primary-dark" href="/" target="_blank">Primary dark - Link</MyButton>
-
-		<hr />
-
-		<TextField label="Insert your message here" name="name" isRequired={true} />
-
-		<hr />
-
-		<TextField
-			label="Insert your message here"
-			name="name1"
-			isRequired={true}
-			error="This field is required"
-		/>
-
-		<TextField
-			label="Insert your message here"
-			name="name2"
-			isRequired={true}
-			isMultiline={true}
-			error="This field is required"
-		/>
-
 		<Hero />
 
 		<Teams />
