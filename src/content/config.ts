@@ -43,9 +43,18 @@ const directorsCollection = defineCollection({
 	})
 });
 
+const asksCollection = defineCollection({
+	type: "content",
+	schema: z.object({
+		description: z.string(),
+		iconUrl: z.string()
+	})
+});
+
 export const collections = {
 	"stories": storiesCollection,
 	"teams": teamsCollection,
 	"clients": clientsCollection,
-	"directors": directorsCollection
+	"directors": directorsCollection,
+	"asks": asksCollection
 };
