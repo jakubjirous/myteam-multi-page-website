@@ -12,15 +12,14 @@ interface Props {
 const { director } = Astro.props;
 ---
 
-<div class="relative">
-	<div class="group w-screen h-64 mx-auto max-w-[20.5rem] tablet:max-w-full">
+<director-card class="relative">
+	<div class="w-screen h-64 mx-auto max-w-[20.5rem] tablet:max-w-full">
 		<button
-			class="peer w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300 hover:bg-baked hover:rotate-45 group-hover:bg-baked group-hover:rotate-45">
+			class="w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300">
 			<Image src={iconCross} alt="More" width={16} height={16} />
 		</button>
-
 		<div
-			class="relative h-full w-full transition-all duration-300 [transform-style:preserve-3d] peer-hover:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
+			class="card relative h-full w-full transition-all duration-300 [transform-style:preserve-3d]">
 
 			<!-- front -->
 			<div
@@ -63,4 +62,38 @@ const { director } = Astro.props;
 			</div>
 		</div>
 	</div>
-</div>
+</director-card>
+
+<script>
+	class DirectorCard extends HTMLElement {
+		constructor() {
+			super();
+
+			let isClicked = false;
+
+			const button = this.querySelector("button");
+			const card = this.querySelector(".card");
+
+			// Each time the button is clicked, update the count.
+			button.addEventListener("click", () => {
+				isClicked = !isClicked;
+
+				if (isClicked) {
+					button.classList.remove("bg-flory");
+					button.classList.add("bg-baked");
+					button.classList.add("rotate-45");
+
+					card.classList.add("[transform:rotateY(180deg)]");
+				} else {
+					button.classList.add("bg-flory");
+					button.classList.remove("bg-baked");
+					button.classList.remove("rotate-45");
+
+					card.classList.remove("[transform:rotateY(180deg)]");
+				}
+			});
+		}
+	}
+
+	customElements.define("director-card", DirectorCard);
+</script>
