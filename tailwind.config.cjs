@@ -2,7 +2,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	content: [
+		"./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+		"./node_modules/flowbite/**/*.js"
+	],
 	theme: {
 		screens: {
 			// sm: "640px",
@@ -12,7 +15,7 @@ module.exports = {
 			// "2xl": "1536px",
 
 			tablet: "768px",
-			desktop: "1440px",
+			desktop: "1440px"
 		},
 		extend: {
 			colors: {
@@ -25,10 +28,10 @@ module.exports = {
 				casul: "#2C6269",
 				cyprus: "#004047",
 				daintree: "#012F34",
-				swamp: "#002529",
+				swamp: "#002529"
 			},
 			fontFamily: {
-				livvic: ["Livvic", ...defaultTheme.fontFamily.sans],
+				livvic: ["Livvic", ...defaultTheme.fontFamily.sans]
 			},
 			fontSize: {
 				10: ["0.625rem", { lineHeight: "1.125rem" }],
@@ -39,9 +42,11 @@ module.exports = {
 				40: ["2.5rem", { lineHeight: "2.5rem" }],
 				48: ["3rem", { lineHeight: "3rem" }],
 				64: ["4rem", { lineHeight: "3.5rem" }],
-				100: ["6.25rem", { lineHeight: "6.25rem" }],
-			},
-		},
+				100: ["6.25rem", { lineHeight: "6.25rem" }]
+			}
+		}
 	},
-	plugins: [],
+	plugins: [
+		require("flowbite/plugin")
+	]
 };
