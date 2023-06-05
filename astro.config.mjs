@@ -10,5 +10,6 @@ export default defineConfig({
 	integrations: [react(), tailwind(), image(), mdx()],
 	output: "server",
 	root: "./",
-	adapter: vercel()
+	adapter: vercel(),
+	outDir: "/dist"
 });
