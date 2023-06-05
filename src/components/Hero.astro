@@ -2,22 +2,21 @@
 import { Image } from "@astrojs/image/components";
 import pattern1 from "../assets/bg-pattern-home-1.svg";
 import pattern2 from "../assets/bg-pattern-home-2.svg";
-import Typography from "./Typography.astro";
 ---
 
 <section class="bg-sherpa relative overflow-hidden">
 	<div
 		class="container mx-auto relative pt-20 pb-48 px-6 grid grid-cols-1 tablet:pt-28 tablet:pb-64 desktop:pt-32 desktop:pb-60 desktop:grid-cols-2">
 
-		<Typography variant="h1" className="relative text-white text-center desktop:text-left">
+		<h1 class="h1 relative text-white text-center desktop:text-left">
 			Find the <br> best <span class="text-flory">talent</span>
-		</Typography>
+		</h1>
 
-		<Typography variant="body1" as="p"
-								className="text-white text-center mt-4 max-w-md mx-auto relative tablet:mt-6 desktop:mt-20 desktop:text-left desktop:text-18 desktop:before:content-[''] desktop:before:absolute desktop:before:bg-baked desktop:before:w-[3.125rem] desktop:before:h-[0.125rem] desktop:before:-top-20">
+		<p
+			class="body1 text-white text-center mt-4 max-w-md mx-auto relative tablet:mt-6 desktop:mt-20 desktop:text-left desktop:text-18 desktop:before:content-[''] desktop:before:absolute desktop:before:bg-baked desktop:before:w-[3.125rem] desktop:before:h-[0.125rem] desktop:before:-top-20">
 			Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the
 			abundance of global talent. We’re about to change that.
-		</Typography>
+		</p>
 
 		<Image src={pattern2} alt="Background pattern" width={358} height={100}
 					 class="absolute z-0 left-0 bottom-0 right-0 mx-auto hidden tablet:block desktop:left-auto desktop:right-36" />

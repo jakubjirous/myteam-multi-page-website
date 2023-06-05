@@ -1,17 +1,15 @@
 ---
 import { Image } from "@astrojs/image/components";
 import pattern from "../assets/bg-pattern-home-6-about-5.svg";
-import MyButton from "./MyButton.astro";
-import Typography from "./Typography.astro";
 ---
 
 <section class="bg-flory relative overflow-hidden">
 	<div
 		class="container mx-auto flex flex-col items-center gap-6 py-20 tablet:flex-row tablet:items-center tablet:justify-end tablet:gap-20 tablet:py-16 desktop:justify-center desktop:gap-64">
 		<div class="max-w-xs tablet:max-w-full">
-			<Typography variant="h2" className="text-daintree text-center relative">Ready to get started?</Typography>
+			<h2 class="h2 text-daintree text-center relative">Ready to get started?</h2>
 		</div>
-		<MyButton variant="primary-dark" href="/contact">Contact us</MyButton>
+		<a href="/contact" class="btn-primary-dark">Contact us</a>
 	</div>
 
 	<Image src={pattern} alt="Background pattern" width={200} height={144}

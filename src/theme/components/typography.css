@@ -1,0 +1,23 @@
+.h1 {
+	@apply font-livvic text-40 font-bold tablet:text-64 desktop:text-100;
+}
+
+.h2 {
+	@apply font-livvic text-32 font-bold tablet:text-32 desktop:text-48;
+}
+
+.h3 {
+	@apply font-livvic text-18 font-bold;
+}
+
+.body1 {
+	@apply font-livvic text-18 font-semibold text-left;
+}
+
+.body2 {
+	@apply font-livvic text-15 font-semibold text-left;
+}
+
+.small {
+	@apply font-livvic text-13 font-medium text-left italic;
+}

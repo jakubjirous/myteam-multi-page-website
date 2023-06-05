@@ -3,7 +3,6 @@ import { Image } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import type { CollectionEntry } from "astro:content";
 import iconCross from "../assets/icon-cross.svg";
-import Typography from "./Typography.astro";
 
 interface Props {
 	director: CollectionEntry<"directors">;
@@ -29,25 +28,25 @@ const { director } = Astro.props;
 							 aria-label={director.data.name}
 							 class="rounded-full border-2 border-baked" />
 
-				<Typography variant="body1" as="p" className="text-baked text-center pt-4">
+				<p class="body1 text-baked text-center pt-4">
 					{director.data.name}
-				</Typography>
+				</p>
 
-				<Typography variant="body2" as="p" className="text-white text-center italic mb-7">
+				<p class="body2 text-white text-center italic mb-7">
 					{director.data.job}
-				</Typography>
+				</p>
 			</div>
 
 			<!-- back -->
 			<div
 				class="absolute inset-0 h-full w-full bg-daintree flex flex-col items-center px-6 pt-8 desktop:pt-12 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-				<Typography variant="body1" as="p" className="text-baked text-center">
+				<p class="body1 text-baked text-center">
 					{director.data.name}
-				</Typography>
+				</p>
 
-				<Typography variant="body2" as="p" className="text-white text-center mt-2">
+				<p class="body2 text-white text-center mt-2">
 					{director.data.quote}
-				</Typography>
+				</p>
 
 				<div class="flex flex-row gap-4 mt-6">
 					{director.data.socials?.map(social => {

@@ -4,7 +4,6 @@ import { getCollection } from "astro:content";
 import pattern1 from "../assets/bg-pattern-about-2-contact-1.svg";
 import pattern2 from "../assets/bg-pattern-home-4-about-3.svg";
 import Director from "./Director.astro";
-import Typography from "./Typography.astro";
 
 const allDirectors = await getCollection("directors");
 ---
@@ -13,9 +12,9 @@ const allDirectors = await getCollection("directors");
 
 	<div class="container mx-auto px-6 py-20 tablet:py-24 desktop:py-36">
 
-		<Typography variant="h2" className="text-white text-center relative z-10">
+		<h2 class="h2 text-white text-center relative z-10">
 			Meet the directors
-		</Typography>
+		</h2>
 
 		<div
 			class="pt-12 pb-10 grid grid-cols-1 gap-14 items-center justify-center tablet:grid-cols-2 tablet:gap-x-2.5 desktop:grid-cols-3 desktop:gap-x-7">

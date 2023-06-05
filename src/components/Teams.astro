@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import { Image } from "@astrojs/image/components";
 import pattern from "../assets/bg-pattern-home-3.svg";
-import Typography from "./Typography.astro";
 
 const allTeams = await getCollection("teams");
 ---
@@ -10,10 +9,9 @@ const allTeams = await getCollection("teams");
 <section class="bg-daintree relative overflow-hidden">
 	<div class="container mx-auto py-16 px-6 grid grid-cols-1 tablet:py-24 dekstop:py-36 desktop:grid-cols-2">
 
-		<Typography variant="h2"
-								className="text-white text-left mt-8 max-w-[15rem] relative z-10 tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14">
+		<h2 class="h2 text-white text-left mt-8 max-w-[15rem] relative z-10 tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14">
 			Build & manage distributed teams like no one else.
-		</Typography>
+		</h2>
 
 		<div class="flex flex-col gap-12 mt-14 tablet:gap-8 tablet:mt-16 desktop:gap-8 desktop:justify-start desktop:mt-8">
 			{allTeams?.map(team => {
@@ -23,12 +21,12 @@ const allTeams = await getCollection("teams");
 									 aria-label={team.data.title} />
 						<div
 							class="flex flex-col items-center tablet:items-start tablet:w-full tablet:max-w-full desktop:max-w-md">
-							<Typography variant="body1" as="p" className="text-flory text-center pt-4 tablet:text-left">
+							<p class="body1 text-flory text-center pt-4 tablet:text-left">
 								{team.data.title}
-							</Typography>
-							<Typography variant="body2" as="p" className="text-white text-center pt-2 tablet:text-left">
+							</p>
+							<p class="body2 text-white text-center pt-2 tablet:text-left">
 								{team.data.description}
-							</Typography>
+							</p>
 						</div>
 					</div>
 				);

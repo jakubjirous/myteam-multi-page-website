@@ -1,21 +1,19 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { getPageDataByViteID } from "astro/dist/core/build/internal";
 import { getCollection } from "astro:content";
-import Typography from "./Typography.astro";
 
 const allAsks = await getCollection("asks");
 ---
 
 <div class="flex flex-col items-center desktop:items-start">
 
-	<Typography variant="h1" className="text-white text-center desktop:text-left">
+	<h1 class="h1 text-white text-center desktop:text-left">
 		Contact
-	</Typography>
+	</h1>
 
-	<Typography variant="h2" className="text-flory text-center mt-4 tablet:mt-6 desktop:text-left">
+	<h2 class="h2 text-flory text-center mt-4 tablet:mt-6 desktop:text-left">
 		Ask us about
-	</Typography>
+	</h2>
 
 	<div class="flex flex-col gap-6 mt-10 tablet:gap-2 tablet:mt-6 desktop:mt-12">
 		{allAsks.map(ask => {
@@ -24,15 +22,11 @@ const allAsks = await getCollection("asks");
 					<Image src={import(ask.data.iconUrl)} alt={ask.data.description} width={72} height={72}
 								 aria-label={ask.data.description} class="min-w-[4.5rem]" />
 
-					<Typography variant="body1" as="p" className="text-white">
+					<p class="body1 text-white">
 						{ask.data.description}
-					</Typography>
+					</p>
 				</div>
 			);
-
-
 		})}
-
 	</div>
-
 </div>

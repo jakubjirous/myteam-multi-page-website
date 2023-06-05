@@ -1,8 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
 import logo from "../assets/logo.svg";
-import NavLink from "./NavLink.astro";
-import Typography from "./Typography.astro";
 import { Icon } from "astro-icon";
 
 const year = new Date().getFullYear();
@@ -49,18 +47,18 @@ const year = new Date().getFullYear();
 		<div
 			class="w-full opacity-60 tablet:order-2 tablet:row-span-2"
 		>
-			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+			<p class="body2 text-center tablet:text-right desktop:text-left">
 				987 Hillcrest Lane
-			</Typography>
-			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+			</p>
+			<p class="body2 text-center tablet:text-right desktop:text-left">
 				Irvine, CA
-			</Typography>
-			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+			</p>
+			<p class="body2 text-center tablet:text-right desktop:text-left">
 				California 92714
-			</Typography>
-			<Typography variant="body2" as="p" className="text-center tablet:text-right desktop:text-left">
+			</p>
+			<p class="body2 text-center tablet:text-right desktop:text-left">
 				Call Us : 949-833-7432
-			</Typography>
+			</p>
 		</div>
 
 		<div
@@ -95,9 +93,9 @@ const year = new Date().getFullYear();
 		<div
 			class="w-full flex justify-center tablet:justify-end tablet:order-5 tablet:items-end"
 		>
-			<Typography variant="body2" as="p" className="opacity-60">
+			<p class="body2 opacity-60">
 				Copyright {year}. All Rights Reserved
-			</Typography>
+			</p>
 		</div>
 	</div>
 </footer>
