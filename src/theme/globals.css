@@ -1,32 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@import "tailwindcss/base.css";
+@import "base.css";
 
-@layer base {
-	html {
-		font-family: "Livvic", serif;
-		@apply bg-sherpa;
-	}
+@import "tailwindcss/components.css";
+@import "components.css";
 
-	/* scrollbars */
-	* {
-		scrollbar-width: auto;
-		scrollbar-color: theme("colors.casul") theme("colors.swamp");
-	}
+@import "tailwindcss/utilities.css";
 
-	*::-webkit-scrollbar {
-		width: 14px;
-	}
+@import "tailwindcss/variants.css";
 
-	*::-webkit-scrollbar-track {
-		background: theme("colors.swamp");
-		border-radius: 8px;
-	}
-
-	*::-webkit-scrollbar-thumb {
-		background-color: theme("colors.casul");
-		border-radius: 16px;
-		border: 2px solid theme("colors.casul");
-	}
-}
