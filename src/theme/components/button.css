@@ -1,0 +1,16 @@
+.btn-primary {
+	@apply inline-flex text-18 font-semibold lowercase px-8 py-2 transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed bg-transparent text-white border-solid border-2 border-transparent rounded-3xl hover:bg-white hover:text-swamp disabled:text-white/25 disabled:bg-transparent disabled:border-white/25;
+}
+
+.btn-primary-light {
+	@apply inline-flex text-18 font-semibold lowercase px-8 py-2 transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed bg-transparent text-white border-solid border-2 border-white rounded-3xl hover:bg-white hover:text-swamp disabled:text-white/25 disabled:bg-transparent disabled:border-white/25;
+}
+
+.btn-primary-dark {
+	@apply inline-flex text-18 font-semibold lowercase px-8 py-2 transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed bg-transparent text-daintree border-solid border-2 border-daintree rounded-3xl hover:bg-daintree hover:text-white disabled:text-white/25 disabled:bg-transparent disabled:border-white/25;
+}
+
+.btn-secondary {
+	@apply inline-flex text-18 font-semibold lowercase px-8 py-2 transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed bg-white text-swamp rounded-3xl hover:bg-baked disabled:bg-white/25;
+}
+
