@@ -7,33 +7,49 @@ const allTeams = await getCollection("teams");
 ---
 
 <section class="bg-daintree relative overflow-hidden">
-	<div class="container mx-auto py-16 px-6 grid grid-cols-1 tablet:py-24 dekstop:py-36 desktop:grid-cols-2">
-
-		<h2 class="h2 text-white text-left mt-8 max-w-[15rem] relative z-10 tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14">
+	<div
+		class="container mx-auto py-16 px-6 grid grid-cols-1 tablet:py-24 dekstop:py-36 desktop:grid-cols-2"
+	>
+		<h2
+			class="h2 text-white text-left mt-8 max-w-[15rem] relative z-10 tablet:max-w-[27rem] dekstop:mt-14 before:content-[''] before:absolute before:bg-flory before:w-[3.125rem] before:h-[0.125rem] before:-top-8 desktop:before:-top-14"
+		>
 			Build & manage distributed teams like no one else.
 		</h2>
 
-		<div class="flex flex-col gap-12 mt-14 tablet:gap-8 tablet:mt-16 desktop:gap-8 desktop:justify-start desktop:mt-8">
-			{allTeams?.map(team => {
-				return (
-					<div class="flex flex-col items-center tablet:flex-row tablet:gap-6">
-						<Image src={import(team.data.iconUrl)} alt={team.data.title} width={72} height={72}
-									 aria-label={team.data.title} />
-						<div
-							class="flex flex-col items-center tablet:items-start tablet:w-full tablet:max-w-full desktop:max-w-md">
-							<p class="body1 text-flory text-center pt-4 tablet:text-left">
-								{team.data.title}
-							</p>
-							<p class="body2 text-white text-center pt-2 tablet:text-left">
-								{team.data.description}
-							</p>
+		<div
+			class="flex flex-col gap-12 mt-14 tablet:gap-8 tablet:mt-16 desktop:gap-8 desktop:justify-start desktop:mt-8"
+		>
+			{
+				allTeams?.map((team) => {
+					return (
+						<div class="flex flex-col items-center tablet:flex-row tablet:gap-6">
+							<Image
+								src={import(team.data.iconUrl)}
+								alt={team.data.title}
+								width={72}
+								height={72}
+								aria-label={team.data.title}
+							/>
+							<div class="flex flex-col items-center tablet:items-start tablet:w-full tablet:max-w-full desktop:max-w-md">
+								<p class="body1 text-flory text-center pt-4 tablet:text-left">
+									{team.data.title}
+								</p>
+								<p class="body2 text-white text-center pt-2 tablet:text-left">
+									{team.data.description}
+								</p>
+							</div>
 						</div>
-					</div>
-				);
-			})}
+					);
+				})
+			}
 		</div>
 
-		<Image src={pattern} alt="Background pattern" width={200} height={244}
-					 class="absolute z-0 top-0 -right-[6.25rem] desktop:bottom-0 desktop:top-auto" />
+		<Image
+			src={pattern}
+			alt="Background pattern"
+			width={200}
+			height={244}
+			class="absolute z-0 top-0 -right-[6.25rem] desktop:bottom-0 desktop:top-auto"
+		/>
 	</div>
 </section>

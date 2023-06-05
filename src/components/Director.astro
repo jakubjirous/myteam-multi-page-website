@@ -14,19 +14,25 @@ const { director } = Astro.props;
 <director-card class="relative">
 	<div class="w-screen h-64 mx-auto max-w-[20.5rem] tablet:max-w-full">
 		<button
-			class="w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300">
+			class="w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300"
+		>
 			<Image src={iconCross} alt="More" width={16} height={16} />
 		</button>
 		<div
-			class="card relative h-full w-full transition-all duration-300 [transform-style:preserve-3d]">
-
+			class="card relative h-full w-full transition-all duration-300 [transform-style:preserve-3d]"
+		>
 			<!-- front -->
 			<div
-				class="absolute inset-0 bg-daintree transition-all duration-300 flex flex-col items-center p-8">
-				<Image src={import(/* @vite-ignore */director.data.avatarUrl)} alt={director.data.name} width={96}
-							 height={96}
-							 aria-label={director.data.name}
-							 class="rounded-full border-2 border-baked" />
+				class="absolute inset-0 bg-daintree transition-all duration-300 flex flex-col items-center p-8"
+			>
+				<Image
+					src={import(/* @vite-ignore */ director.data.avatarUrl)}
+					alt={director.data.name}
+					width={96}
+					height={96}
+					aria-label={director.data.name}
+					class="rounded-full border-2 border-baked"
+				/>
 
 				<p class="body1 text-baked text-center pt-4">
 					{director.data.name}
@@ -39,7 +45,8 @@ const { director } = Astro.props;
 
 			<!-- back -->
 			<div
-				class="absolute inset-0 h-full w-full bg-daintree flex flex-col items-center px-6 pt-8 desktop:pt-12 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+				class="absolute inset-0 h-full w-full bg-daintree flex flex-col items-center px-6 pt-8 desktop:pt-12 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+			>
 				<p class="body1 text-baked text-center">
 					{director.data.name}
 				</p>
@@ -49,14 +56,20 @@ const { director } = Astro.props;
 				</p>
 
 				<div class="flex flex-row gap-4 mt-6">
-					{director.data.socials?.map(social => {
-						return (
-							<a href={social.url} target="_blank" rel="nofollow"
-								 class="text-white hover:text-flory ease-in-out duration-300">
-								<Icon name={social.iconName} width={24} height={24} />
-							</a>
-						);
-					})}
+					{
+						director.data.socials?.map((social) => {
+							return (
+								<a
+									href={social.url}
+									target="_blank"
+									rel="nofollow"
+									class="text-white hover:text-flory ease-in-out duration-300"
+								>
+									<Icon name={social.iconName} width={24} height={24} />
+								</a>
+							);
+						})
+					}
 				</div>
 			</div>
 		</div>

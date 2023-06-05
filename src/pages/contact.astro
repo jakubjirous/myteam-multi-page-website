@@ -11,16 +11,28 @@ import { Form } from "../components/Form";
 <Base title="Contact">
 	<Layout>
 		<section class="bg-sherpa relative overflow-hidden">
-			<div class="container mx-auto px-6 py-24 tablet:py-28 grid grid-cols-1 gap-14 tablet:gap-16 desktop:grid-cols-2">
+			<div
+				class="container mx-auto px-6 py-24 tablet:py-28 grid grid-cols-1 gap-14 tablet:gap-16 desktop:grid-cols-2"
+			>
 				<Ask />
 				<Form client:visible />
 			</div>
 
-			<Image src={pattern1} alt="Background pattern" width={200} height={200}
-						 class="absolute z-0 top-0 -left-[6.25rem] hidden tablet:block tablet:top-24 desktop:hidden min-[1700px]:block" />
+			<Image
+				src={pattern1}
+				alt="Background pattern"
+				width={200}
+				height={200}
+				class="absolute z-0 top-0 -left-[6.25rem] hidden tablet:block tablet:top-24 desktop:hidden min-[1700px]:block"
+			/>
 
-			<Image src={pattern2} alt="Background pattern" width={200} height={200}
-						 class="absolute z-0 -bottom-[6.25rem] -right-[6.25rem] tablet:bottom-0" />
+			<Image
+				src={pattern2}
+				alt="Background pattern"
+				width={200}
+				height={200}
+				class="absolute z-0 -bottom-[6.25rem] -right-[6.25rem] tablet:bottom-0"
+			/>
 		</section>
 	</Layout>
 </Base>

@@ -6,27 +6,30 @@ const allAsks = await getCollection("asks");
 ---
 
 <div class="flex flex-col items-center desktop:items-start">
-
-	<h1 class="h1 text-white text-center desktop:text-left">
-		Contact
-	</h1>
+	<h1 class="h1 text-white text-center desktop:text-left">Contact</h1>
 
 	<h2 class="h2 text-flory text-center mt-4 tablet:mt-6 desktop:text-left">
 		Ask us about
 	</h2>
 
 	<div class="flex flex-col gap-6 mt-10 tablet:gap-2 tablet:mt-6 desktop:mt-12">
-		{allAsks.map(ask => {
-			return (
-				<div class="flex flex-row items-center justify-start gap-6">
-					<Image src={import(ask.data.iconUrl)} alt={ask.data.description} width={72} height={72}
-								 aria-label={ask.data.description} class="min-w-[4.5rem]" />
+		{
+			allAsks.map((ask) => {
+				return (
+					<div class="flex flex-row items-center justify-start gap-6">
+						<Image
+							src={import(ask.data.iconUrl)}
+							alt={ask.data.description}
+							width={72}
+							height={72}
+							aria-label={ask.data.description}
+							class="min-w-[4.5rem]"
+						/>
 
-					<p class="body1 text-white">
-						{ask.data.description}
-					</p>
-				</div>
-			);
-		})}
+						<p class="body1 text-white">{ask.data.description}</p>
+					</div>
+				);
+			})
+		}
 	</div>
 </div>

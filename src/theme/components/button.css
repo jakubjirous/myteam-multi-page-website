@@ -13,4 +13,3 @@
 .btn-secondary {
 	@apply inline-flex text-18 font-semibold lowercase px-8 py-2 transition duration-500 hover:cursor-pointer disabled:cursor-not-allowed bg-white text-swamp rounded-3xl hover:bg-baked disabled:bg-white/25;
 }
-

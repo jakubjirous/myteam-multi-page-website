@@ -6,8 +6,8 @@ const storiesCollection = defineCollection({
 		name: z.string(),
 		job: z.string(),
 		quote: z.string(),
-		avatarUrl: z.string()
-	})
+		avatarUrl: z.string(),
+	}),
 });
 
 const teamsCollection = defineCollection({
@@ -15,8 +15,8 @@ const teamsCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
-		iconUrl: z.string()
-	})
+		iconUrl: z.string(),
+	}),
 });
 
 const clientsCollection = defineCollection({
@@ -24,8 +24,8 @@ const clientsCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		logoUrl: z.string(),
-		url: z.string()
-	})
+		url: z.string(),
+	}),
 });
 
 const directorsCollection = defineCollection({
@@ -35,26 +35,28 @@ const directorsCollection = defineCollection({
 		job: z.string(),
 		quote: z.string(),
 		avatarUrl: z.string(),
-		socials: z.array(z.object({
-			title: z.string(),
-			url: z.string(),
-			iconName: z.string()
-		}))
-	})
+		socials: z.array(
+			z.object({
+				title: z.string(),
+				url: z.string(),
+				iconName: z.string(),
+			})
+		),
+	}),
 });
 
 const asksCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		description: z.string(),
-		iconUrl: z.string()
-	})
+		iconUrl: z.string(),
+	}),
 });
 
 export const collections = {
-	"stories": storiesCollection,
-	"teams": teamsCollection,
-	"clients": clientsCollection,
-	"directors": directorsCollection,
-	"asks": asksCollection
+	stories: storiesCollection,
+	teams: teamsCollection,
+	clients: clientsCollection,
+	directors: directorsCollection,
+	asks: asksCollection,
 };

@@ -9,5 +9,5 @@ socials:
     iconName: fa-brands:twitter
   - title: LinkedIn
     url: https://www.linkedin.com/
-    iconName: fa-brands:linkedin 
+    iconName: fa-brands:linkedin
 ---
