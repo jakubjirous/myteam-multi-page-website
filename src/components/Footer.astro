@@ -1,6 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
-import logo from "../assets/logo.svg";
+import logo from "../../public/assets/logo.svg";
 import { Icon } from "astro-icon";
 
 const year = new Date().getFullYear();
@@ -14,15 +13,15 @@ const year = new Date().getFullYear();
 			class="w-full flex justify-center tablet:order-1 tablet:items-start tablet:justify-start"
 		>
 			<a href="/">
-				<Image
-					src={logo}
+				<img
+					src={logo.src}
 					alt="MyTeam"
 					width={95}
 					height={24}
 					class="desktop:hidden"
 				/>
-				<Image
-					src={logo}
+				<img
+					src={logo.src}
 					alt="MyTeam"
 					width={160}
 					height={40}

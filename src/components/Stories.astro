@@ -1,9 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "@astrojs/image/components";
-
-import pattern1 from "../assets/bg-pattern-home-4-about-3.svg";
-import pattern2 from "../assets/bg-pattern-home-5.svg";
+import pattern1 from "../../public/assets/bg-pattern-home-4-about-3.svg";
+import pattern2 from "../../public/assets/bg-pattern-home-5.svg";
 
 const allStories = await getCollection("stories");
 ---
@@ -37,8 +35,8 @@ const allStories = await getCollection("stories");
 								</p>
 							</div>
 							<div class="flex flex-row justify-center pt-4">
-								<Image
-									src={import(story.data.avatarUrl)}
+								<img
+									src={story.data.avatarUrl}
 									alt={story.data.name}
 									width={62}
 									height={62}
@@ -52,15 +50,15 @@ const allStories = await getCollection("stories");
 			}
 		</div>
 
-		<Image
-			src={pattern1}
+		<img
+			src={pattern1.src}
 			alt="Background pattern"
 			width={147}
 			height={100}
 			class="absolute z-0 top-0 left-0"
 		/>
-		<Image
-			src={pattern2}
+		<img
+			src={pattern2.src}
 			alt="Background pattern"
 			width={200}
 			height={100}

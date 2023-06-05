@@ -1,6 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
-import pattern from "../assets/bg-pattern-home-6-about-5.svg";
+import pattern from "../../public/assets/bg-pattern-home-6-about-5.svg";
 ---
 
 <section class="bg-flory relative overflow-hidden">
@@ -15,8 +14,8 @@ import pattern from "../assets/bg-pattern-home-6-about-5.svg";
 		<a href="/contact" class="btn-primary-dark">Contact us</a>
 	</div>
 
-	<Image
-		src={pattern}
+	<img
+		src={pattern.src}
 		alt="Background pattern"
 		width={200}
 		height={144}

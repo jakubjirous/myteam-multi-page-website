@@ -1,8 +1,7 @@
 ---
-import { Image } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import type { CollectionEntry } from "astro:content";
-import iconCross from "../assets/icon-cross.svg";
+import iconCross from "../../public/assets/icon-cross.svg";
 
 interface Props {
 	director: CollectionEntry<"directors">;
@@ -16,7 +15,7 @@ const { director } = Astro.props;
 		<button
 			class="w-14 h-14 bg-flory flex justify-center items-center rounded-full absolute z-10 left-0 -bottom-7 right-0 mx-auto ease-in-out duration-300"
 		>
-			<Image src={iconCross} alt="More" width={16} height={16} />
+			<img src={iconCross.src} alt="More" width={16} height={16} />
 		</button>
 		<div
 			class="card relative h-full w-full transition-all duration-300 [transform-style:preserve-3d]"
@@ -25,8 +24,8 @@ const { director } = Astro.props;
 			<div
 				class="absolute inset-0 bg-daintree transition-all duration-300 flex flex-col items-center p-8"
 			>
-				<Image
-					src={import(/* @vite-ignore */ director.data.avatarUrl)}
+				<img
+					src={director.data.avatarUrl}
 					alt={director.data.name}
 					width={96}
 					height={96}

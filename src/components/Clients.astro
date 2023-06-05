@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "@astrojs/image/components";
-import pattern from "../assets/bg-pattern-about-4.svg";
+import pattern from "../../public/assets/bg-pattern-about-4.svg";
 
 const allClients = await getCollection("clients");
 ---
@@ -23,8 +22,8 @@ const allClients = await getCollection("clients");
 							aria-label={client.data.title}
 							class="hover:scale-125 ease-in-out duration-300"
 						>
-							<Image
-								src={import(client.data.logoUrl)}
+							<img
+								src={client.data.logoUrl}
 								alt={client.data.title}
 								aria-label={client.data.title}
 								class="scale-50 tablet:scale-100 desktop:scale-75"
@@ -36,8 +35,8 @@ const allClients = await getCollection("clients");
 		</div>
 	</div>
 
-	<Image
-		src={pattern}
+	<img
+		src={pattern.src}
 		alt="Background pattern"
 		width={200}
 		height={200}

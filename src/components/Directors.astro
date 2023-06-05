@@ -1,8 +1,7 @@
 ---
-import { Image } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
-import pattern1 from "../assets/bg-pattern-about-2-contact-1.svg";
-import pattern2 from "../assets/bg-pattern-home-4-about-3.svg";
+import pattern1 from "../../public/assets/bg-pattern-about-2-contact-1.svg";
+import pattern2 from "../../public/assets/bg-pattern-home-4-about-3.svg";
 import Director from "./Director.astro";
 
 const allDirectors = await getCollection("directors");
@@ -15,20 +14,21 @@ const allDirectors = await getCollection("directors");
 		<div
 			class="pt-12 pb-10 grid grid-cols-1 gap-14 items-center justify-center tablet:grid-cols-2 tablet:gap-x-2.5 desktop:grid-cols-3 desktop:gap-x-7"
 		>
-			{allDirectors?.map((director) => <Director director={director} />)}
+			{allDirectors?.map((director) =>
+				<Director director={director} />)}
 		</div>
 	</div>
 
-	<Image
-		src={pattern1}
+	<img
+		src={pattern1.src}
 		alt="Background pattern"
 		width={200}
 		height={200}
 		class="absolute z-0 -top-[6.25rem] -left-[6.25rem] tablet:top-0"
 	/>
 
-	<Image
-		src={pattern2}
+	<img
+		src={pattern2.src}
 		alt="Background pattern"
 		width={147}
 		height={100}

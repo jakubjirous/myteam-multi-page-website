@@ -1,7 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
-import pattern1 from "../assets/bg-pattern-home-1.svg";
-import pattern2 from "../assets/bg-pattern-home-2.svg";
+import pattern1 from "../../public/assets/bg-pattern-home-1.svg";
+import pattern2 from "../../public/assets/bg-pattern-home-2.svg";
 ---
 
 <section class="bg-sherpa relative overflow-hidden">
@@ -20,8 +19,8 @@ import pattern2 from "../assets/bg-pattern-home-2.svg";
 			about to change that.
 		</p>
 
-		<Image
-			src={pattern2}
+		<img
+			src={pattern2.src}
 			alt="Background pattern"
 			width={358}
 			height={100}
@@ -29,8 +28,8 @@ import pattern2 from "../assets/bg-pattern-home-2.svg";
 		/>
 	</div>
 
-	<Image
-		src={pattern1}
+	<img
+		src={pattern1.src}
 		alt="Background pattern"
 		width={200}
 		height={200}

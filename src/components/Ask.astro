@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
 
 const allAsks = await getCollection("asks");
@@ -17,8 +16,8 @@ const allAsks = await getCollection("asks");
 			allAsks.map((ask) => {
 				return (
 					<div class="flex flex-row items-center justify-start gap-6">
-						<Image
-							src={import(ask.data.iconUrl)}
+						<img
+							src={ask.data.iconUrl}
 							alt={ask.data.description}
 							width={72}
 							height={72}

@@ -1,7 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
-import pattern from "../assets/bg-pattern-about-1-mobile-nav-1.svg";
-import logo from "../assets/logo.svg";
+import pattern from "../../public/assets/bg-pattern-about-1-mobile-nav-1.svg";
+import logo from "../../public/assets/logo.svg";
 ---
 
 <header>
@@ -10,15 +9,15 @@ import logo from "../assets/logo.svg";
 	>
 		<div class="flex-initial min-w-[6rem]">
 			<a href="/">
-				<Image
-					src={logo}
+				<img
+					src={logo.src}
 					alt="MyTeam"
 					width={95}
 					height={24}
 					class="desktop:hidden"
 				/>
-				<Image
-					src={logo}
+				<img
+					src={logo.src}
 					alt="MyTeam"
 					width={160}
 					height={40}
@@ -97,8 +96,8 @@ import logo from "../assets/logo.svg";
 				</ul>
 			</nav>
 
-			<Image
-				src={pattern}
+			<img
+				src={pattern.src}
 				alt="Background pattern"
 				width={200}
 				height={200}

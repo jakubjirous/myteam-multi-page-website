@@ -1,7 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
-import pattern1 from "../assets/bg-pattern-about-2-contact-1.svg";
-import pattern2 from "../assets/bg-pattern-contact-2.svg";
+import pattern1 from "../../public/assets/bg-pattern-about-2-contact-1.svg";
+import pattern2 from "../../public/assets/bg-pattern-contact-2.svg";
 import Ask from "../components/Ask.astro";
 import Base from "../layouts/Base.astro";
 import Layout from "../layouts/Layout.astro";
@@ -18,16 +17,16 @@ import { Form } from "../components/Form";
 				<Form client:visible />
 			</div>
 
-			<Image
-				src={pattern1}
+			<img
+				src={pattern1.src}
 				alt="Background pattern"
 				width={200}
 				height={200}
 				class="absolute z-0 top-0 -left-[6.25rem] hidden tablet:block tablet:top-24 desktop:hidden min-[1700px]:block"
 			/>
 
-			<Image
-				src={pattern2}
+			<img
+				src={pattern2.src}
 				alt="Background pattern"
 				width={200}
 				height={200}
