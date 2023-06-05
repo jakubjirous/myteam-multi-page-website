@@ -2,8 +2,6 @@
 import { Image } from "@astrojs/image/components";
 import pattern from "../assets/bg-pattern-about-1-mobile-nav-1.svg";
 import logo from "../assets/logo.svg";
-import MyButton from "./MyButton.astro";
-import NavLink from "./NavLink.astro";
 ---
 <header>
 	<div
@@ -30,10 +28,10 @@ import NavLink from "./NavLink.astro";
 		<nav class="hidden tablet:flex flex-row items-center justify-between w-full">
 			<ul class="flex flex-row gap-10">
 				<li>
-					<NavLink href="/">Home</NavLink>
+					<a href="/" class="nav-link">Home</a>
 				</li>
 				<li>
-					<NavLink href="/about">About</NavLink>
+					<a href="/about" class="nav-link">About</a>
 				</li>
 			</ul>
 			<ul>
@@ -73,10 +71,10 @@ import NavLink from "./NavLink.astro";
 			<nav>
 				<ul class="flex flex-col gap-6">
 					<li>
-						<NavLink href="/" className="text-18">Home</NavLink>
+						<a href="/" class="nav-link text-18">Home</a>
 					</li>
 					<li>
-						<NavLink href="/about" className="text-18">About</NavLink>
+						<a href="/about" class="nav-link text-18">About</a>
 					</li>
 					<li class="mt-3">
 						<MyButton variant="primary-light" href="/contact">Contact us</MyButton>

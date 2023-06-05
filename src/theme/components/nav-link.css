@@ -1,0 +1,4 @@
+.nav-link {
+	@apply font-livvic text-white font-semibold text-15 leading-6 lowercase hover:text-flory ease-in-out duration-300 desktop:text-18 desktop:leading-7;
+}
+
