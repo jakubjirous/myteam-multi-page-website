@@ -4,7 +4,7 @@
 		@apply bg-sherpa;
 	}
 
-	*:focus {
+	*:focus-visible {
 		@apply outline-0 ring-1 ring-offset-2 ring-baked ring-offset-baked;
 	}
 
