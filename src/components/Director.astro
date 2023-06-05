@@ -74,21 +74,21 @@ const { director } = Astro.props;
 			const card = this.querySelector(".card");
 
 			// Each time the button is clicked, update the count.
-			button.addEventListener("click", () => {
+			button?.addEventListener("click", () => {
 				isClicked = !isClicked;
 
 				if (isClicked) {
-					button.classList.remove("bg-flory");
-					button.classList.add("bg-baked");
-					button.classList.add("rotate-45");
+					button?.classList.remove("bg-flory");
+					button?.classList.add("bg-baked");
+					button?.classList.add("rotate-45");
 
-					card.classList.add("[transform:rotateY(180deg)]");
+					card?.classList.add("[transform:rotateY(180deg)]");
 				} else {
-					button.classList.add("bg-flory");
-					button.classList.remove("bg-baked");
-					button.classList.remove("rotate-45");
+					button?.classList.add("bg-flory");
+					button?.classList.remove("bg-baked");
+					button?.classList.remove("rotate-45");
 
-					card.classList.remove("[transform:rotateY(180deg)]");
+					card?.classList.remove("[transform:rotateY(180deg)]");
 				}
 			});
 		}
