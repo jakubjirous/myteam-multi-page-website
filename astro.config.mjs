@@ -7,9 +7,14 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [react(), tailwind(), image({ serviceEntryPoint: "@astrojs/image/sharp" }), mdx()],
+	integrations: [
+		react(),
+		tailwind(),
+		image({ serviceEntryPoint: "@astrojs/image/sharp" }),
+		mdx(),
+	],
 	output: "server",
 	root: "./",
 	adapter: vercel(),
-	outDir: "/dist"
+	outDir: "/dist",
 });
