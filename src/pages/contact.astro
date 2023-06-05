@@ -3,9 +3,9 @@ import { Image } from "@astrojs/image/components";
 import pattern1 from "../assets/bg-pattern-about-2-contact-1.svg";
 import pattern2 from "../assets/bg-pattern-contact-2.svg";
 import Ask from "../components/Ask.astro";
-import ContactForm from "../components/ContactForm.astro";
 import Base from "../layouts/Base.astro";
 import Layout from "../layouts/Layout.astro";
+import { Form } from "../components/Form";
 ---
 
 <Base title="Contact">
@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 		<section class="bg-sherpa relative overflow-hidden">
 			<div class="container mx-auto px-6 py-24 tablet:py-28 grid grid-cols-1 gap-14 tablet:gap-16 desktop:grid-cols-2">
 				<Ask />
-				<ContactForm />
+				<Form client:visible />
 			</div>
 
 			<Image src={pattern1} alt="Background pattern" width={200} height={200}
