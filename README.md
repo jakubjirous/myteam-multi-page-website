@@ -9,13 +9,13 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 ## ✅ Table of contents
 
 - [Overview](#-overview)
-  - [The challenge](#the-challenge)
-  - [Screenshots](#screenshots)
-  - [Links](#links)
+	- [The challenge](#the-challenge)
+	- [Screenshots](#screenshots)
+	- [Links](#links)
 - [My process](#-my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
+	- [Built with](#built-with)
+	- [What I learned](#what-i-learned)
+	- [Useful resources](#useful-resources)
 - [Author](#-author)
 
 ---
@@ -30,16 +30,19 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - See the correct content for each team member on the About page when the `+` icon is clicked
 - Receive an error message when the contact form is submitted if:
-  - The `Name`, `Email Address` or `Message` fields are empty should show `"This field is required"`
-  - The `Email Address` is not formatted correctly should show `"Please use a valid email address"`
+	- The `Name`, `Email Address` or `Message` fields are empty should show `"This field is required"`
+	- The `Email Address` is not formatted correctly should show `"Please use a valid email address"`
 
 ### Screenshots
-
-...
 
 <p align="center"> 
   <img src="public/assets/screenshot-desktop.png" alt="desktop version">
   <em>desktop version</em>
+</p>
+
+<p align="center"> 
+  <img src="public/assets/screenshot-tablet.png" alt="tablet version">
+  <em>tablet version</em>
 </p>
 
 <p align="center"> 
@@ -49,8 +52,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/jakubjirous/my-team-multi-page-website/)
-- Live Site URL: [Vercel](https://my-team-multi-page-website-jakubjirous.vercel.app/)
+- Solution URL: [GitHub](https://github.com/jakubjirous/myteam-multi-page-website/)
+- Live Site URL: [Vercel](https://myteam-multi-page-website-jakubjirous.vercel.app/)
 
 ---
 
@@ -71,7 +74,26 @@ Users should be able to:
 
 ### What I learned
 
-...
+- **Astro.js:**
+	- I discovered Astro.js, a powerful static site generator that allows me to build fast and modern websites using
+		components from different frameworks like React, Vue, and Svelte.
+
+
+- **Tailwind CSS:**
+	- I deepened my knowledge of Tailwind CSS, a utility-first CSS framework. It simplifies rapid development by offering
+		pre-defined utility classes that can be combined to create complex designs while maintaining a clean and readable
+		codebase.
+
+
+- **Flowbite:**
+	- I explored Flowbite, a comprehensive UI kit built with Tailwind CSS. It provided me with pre-designed components,
+		layouts, and styles, helping me deepen my knowledge and skills with Tailwind CSS.
+
+
+- **React Hook Forms and Components in Astro:**
+	- I learned about React Hook Forms, a library for building forms in React, and integrated them into Astro sites. This
+		allowed me to streamline form validation, state management, and user input handling while leveraging React's
+		component-based architecture within Astro.js.
 
 ### Useful resources
 
@@ -79,13 +101,13 @@ Users should be able to:
 - [React Documentation](https://beta.reactjs.org/)
 - [React Hook Form Documentation](https://react-hook-form.com/get-started)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
-  - [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
-  - [Customizing Screens](https://tailwindcss.com/docs/screens)
-  - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
-  - [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
-  - [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
+	- [Quick reference](https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference)
+	- [Customizing Screens](https://tailwindcss.com/docs/screens)
+	- [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
+	- [Default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
+	- [Default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale)
 - [Flowbite Documentation](https://flowbite.com/docs/getting-started/introduction/)
-  - [Astro vs. Flowbite](https://flowbite.com/docs/getting-started/astro/)
+	- [Astro vs. Flowbite](https://flowbite.com/docs/getting-started/astro/)
 
 ---
 
