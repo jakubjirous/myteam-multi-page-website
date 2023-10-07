@@ -41,7 +41,7 @@
 		"astro-icon": "^0.8.0",
 		"autoprefixer": "^10.4.14",
 		"flowbite": "^1.6.5",
-		"postcss": "^8.4.24",
+		"postcss": "^8.4.31",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.44.3",
